@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>MINIMAL UVE PLAYER FOR LLDASH ENCRYPTED</title>
+	</head>
+	<script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+	<script>
+		// Configurazione del DRM Widevine
+		var DrmConfig = {
+			'com.widevine.alpha': 'https://widevine-dash.ezdrm.com/proxy?pX=55DDC7',
+			'preferredKeysystem': 'com.widevine.alpha'
+		};
+
+		var defaultInitConfig = {
+			drmConfig: DrmConfig
+		};
+
+		window.onload = function() {
+			var url = "https://lin012-gb-s8-prd-ll.cdn01.skycdp.com/v1/frag/bmff/enc/cenc/t/SKWITHD_HD_SU_SKYUK_4066_0_6112559918033517163.mpd";
+			var player = dashjs.MediaPlayer().create();
+			player.updateSettings({ 'streaming': { 'drm': DrmConfig } });
+			player.initialize(document.querySelector("#videoPlayer"), url, true);
+		};
+	</script>
+	<body>
+		<div id="videoContainer">
+			<video id="videoPlayer" controls style="height:100%; width:100%; position:absolute; bottom:0; left:0"></video>
+		</div>
+	</body>
+</html>
