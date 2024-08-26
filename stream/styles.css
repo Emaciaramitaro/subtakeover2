@@ -1,0 +1,117 @@
+#playbackButtonsNav {
+    height:65px;
+    position: fixed;
+    bottom: -10px;
+    width:100%;
+    left: 7%;
+    z-index: 300;
+}
+
+.button {
+    background-color:  rgba(255,255,255,0.8); 
+    text-align: center;
+    display: inline-block;
+    border-radius: 2px;
+    border: 2px solid #ff7d13;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    height: 30px;
+}
+
+.focus {
+    background:#ff7d13;
+}
+
+#videoURLs {
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 15%;
+    min-height: 30px;
+    bottom:35px;
+    border: 2px solid #ff7d13;
+}
+
+#playButton {
+    margin-left: 15.3%;
+}
+
+.argo-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #360074;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    height: 50px;
+    z-index: 1;
+}
+  
+#argoTitle {
+    position: fixed;
+    top: 0;
+    left: 43%;
+    padding: 0;
+    margin-top: 10px;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+}
+
+#logo {
+    margin-top: 5px;
+    height: 40px;
+    width: 40px;
+    margin-left: 1%;
+}
+
+#audioTracks {
+    border-radius: 2px;
+    border: 2px solid #ff7d13;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    min-height: 30px;
+    width: 100px;
+    position: absolute;
+    left: 72.6%;
+    bottom: 54%;
+}
+
+#textTracks {
+    border-radius: 2px;
+    border: 2px solid #ff7d13;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    min-height: 30px;
+    width: 100px;
+    position: absolute;
+    left: 80.7%;
+    bottom: 54%;
+}
+
+body {
+    background-color: #000000;
+}
+
+#dummyVideo {
+    height:80%;
+    width:80%;
+    position:absolute;
+    bottom:10%;
+    left:10%
+}
+
+#URLInput {
+    margin-left:5%;
+    display: inline-block;
+    border-radius: 2px;
+    border: 2px solid #ff7d13;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    height: 25px;
+}
+
+#URLInput:focus{
+    background-color:  #ff7d13; 
+}
+
+
+
+  
+
+
