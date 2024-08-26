@@ -1,1 +1,19 @@
-
+<!doctype html><html><head><title>Argo Player v0.4</title><link rel="icon" href="favicon.ico"><script src="sampleApp.js"></script>
+  <script defer="defer" src="argoPlayer.js"></script><link href="styles.css" rel="stylesheet"></head>
+  <body><div id="navbar" class="argo-header"><img id="logo" src="argoLogo.png"><p id="argoTitle">ARGO PLAYER<sup id="versionText"></sup></p></div>
+    <div id="playbackButtonsNav"><select id="videoURLs" onchange="onSelectVideoLocator()">
+      <option value="https://cpetestutility.stb.r53.xcal.tv/VideoTestStream/main.m3u8">Test Stream (HLS)</option>
+      <option value="https://storage.googleapis.com/shaka-demo-assets/bbb-dark-truths-hls/hls.m3u8">Big Buck Bunny (HLS)</option>
+      <option value="https://cpetestutility.stb.r53.xcal.tv/VideoTestStream/main.mpd">Test Stream (DASH)</option>
+      <option value="https://dash.akamaized.net/envivio/EnvivioDash3/manifest.mpd">Envivo (DASH)</option>
+      <option value="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4">Sintel (MP4)</option>
+      <option value="https://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey/Manifest_1080p.mpd">Vectors (DASH, Widevine, Custom Header)</option>
+      <option value="https://cdn.bitmovin.com/content/assets/art-of-motion_drm/m3u8s/11331.m3u8">Art Of Motion (HLS, Playready)</option>
+      <option value="https://storage.googleapis.com/shaka-demo-assets/angel-one-widevine-hls/hls.m3u8">Angel One (HLS, Widevine)</option>
+      <option value="https://livesim.dashif.org/dash/vod/testpic_2s/cea608.mpd">DASH Stream (CC)</option></select>
+      <button onclick="app_play()" class="button" id="playButton">Play</button> <button onclick="app_pause()" class="button" id="pauseButton">Pause</button> 
+      <button onclick="app_rewind()" class="button" id="rewindButton">Rewind</button> <button onclick="app_seek_back()" class="button" id="seekBackButton">Seek -</button>
+      <button onclick="app_seek_front()" class="button" id="seekFrontButton">Seek +</button> <button onclick="app_fast_forward()" class="button" id="fastButton">Fast Forward</button>
+      <input onclick="user_input()" id="URLInput" name="URLInput" placeholder="Paste Content URL"> <button onclick="app_load_input()" class="button" id="loadButton">Load</button>
+      <select id="audioTracks" onchange="onSelectAudioLang()"></select> <select id="textTracks" onchange="onSelectTextLang()"></select></div>
+  <video id="dummyVideo"><source src="dummy.mp4" type="video/ave"></video></body></html>
